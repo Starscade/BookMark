@@ -1,7 +1,7 @@
 'use strict';
 /* LICENSE: https://raw.githubusercontent.com/Starscade/BookMark/main/LICENSE */
 class BookMark{
-	constructor(txt){
+	constructor(txt=''){
 		this.TXT=txt;
 		this.toHTML=()=>{
 			const REGX=[
@@ -46,7 +46,7 @@ class BookMark{
 				]
 			];
 			let htm='';
-			const paragraph_array=txt.split(/\n/g,);
+			const paragraph_array=this.TXT.split(/\n/g,);
 			paragraph_array.forEach((line,i)=>{
 				paragraph_array[i]=line.trim();
 				switch(paragraph_array[i][0]){
