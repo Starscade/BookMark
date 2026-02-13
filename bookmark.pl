@@ -1,17 +1,15 @@
 #!/usr/bin/perl -p
-# BookMark v1.0 Alice
 
-
-# PATTDOWN
+# Disarm embedded scripts
 s/<script(.*?)>(.*?)<\/script>/<code>$2<\/code>/g;
 
-# WHITEOUT
+# Trim excess whitespace
 s/\t//g;
 s/\\ /&nbsp;/g;
 s/ +/ /g;
 s/^ *(.*?) *$/$1/g;
 
-# ESCAPE
+# Escaped characters
 s/\\\\/&bsol;/g;
 s/\\\*/&ast;/g;
 s/\\'/&apos;/g;
@@ -29,7 +27,7 @@ s/\\\}/&rbrace;/g;
 s/\\>/&gt;/g;
 s/\\</&lt;/g;
 
-# PARAGRAPHERNALIA
+# Paragraphs
 s/^(.*)$/<p>$1<\/p>/g;
 s/<p><\/p>/<br>/g;
 s/<p>###### *(.*)<\/p>/<h6>$1<\/h6>/g;
@@ -44,7 +42,7 @@ s/<p>\\<\/p>/<p>&nbsp;<\/p>/g;
 s/<p>===<\/p>/<hr>/g;
 s/<p>- /<p>• /g;
 
-# MUSIC_B
+# Text styling
 s/\*\*(.*?)\*\*/<b>$1<\/b>/g;
 s/\*(.*?)\*/<i>$1<\/i>/g;
 s/__(.*?)__/<u>$1<\/u>/g;
@@ -52,7 +50,7 @@ s/~(.*?)~/<s>$1<\/s>/g;
 s/\{(.*?)\}/<code>$1<\/code>/g;
 s/\|(.*?)\|/<mark>$1<\/mark>/g;
 
-# PUNCTUAL
+# Punctuation
 s/\.\.\.|…/ . . . /g;
 s/ - /–/g;
 s/(\d)-(\d)/$1–$3/g;
@@ -62,12 +60,10 @@ s/'/’/g;
 s/"/“/g;
 s/“(.*?)“/“$1”/g;
 
-# PATTENT
+# Symbol shortcuts
 s/\(C\)/©/gi;
 s/\(R\)/®/gi;
 s/\(TM\)/™/gi;
-
-# CYMBALS
 s/\+-/±/g;
 s/\!=/≠/g;
 s/\(1\/4\)/¼/g;
@@ -84,11 +80,11 @@ s/ *\^ *(\d+)/<sup>$1<\/sup>/g;
 s/\^(.*?)\^/<sup>$1<\/sup>/g;
 s/(\d+)’(\d+)“/$1'$2"/g;
 
-# LINK-A-LOT
+# Hyperlinks
 s/<http([\w#!:.,?+=&%@!\-\/]*) (.*?) _>/<a href="http$1"target="_Blank">$2<\/a>/gi;
 s/<http([\w#!:.,?+=&%@!\-\/]*) (.*?)>/<a href="http$1">$2<\/a>/gi;
 s/<(\w+@\w+\.\w+?)>/<a href="mailto:$1">$1<\/a>/gi;
 
-# FOLD
+# Clean-up
 s/\\//g;
 s/\n//g;
