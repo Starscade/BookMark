@@ -28,8 +28,7 @@ Of course, this list scarcely encompasses HTML's ever expanding syntax. Just lik
 
 - - -
 
-BookMark evolved from a series of proprietary tools I created while writing fiction for my website, hence the reason it is so small. I've seldom needed tables or lists or any other fancy structuring beyond what's listed above. And some of those things (like lists) can be imitated in simpler ways. (After all, where was markup anywhen before the late 20th century?)
-For a complete list of all possible shorthand available in BookMark, I invite you to have a gander at the [JavaScript function](https://github.com/Starscade/BookMark/blob/main/BookMark.js) I've included here in this repository.
+BookMark evolved from a series of proprietary tools I created while writing fiction for my website, hence the reason it is so small. I've seldom needed tables or lists or any other fancy structuring beyond what's listed above. And some of those things (like lists) can be imitated in simpler ways. (After all, where was markup anywhere before the late 20th century?)
 
 Thanks for reading this summary, and I hope you find BookMark to be as conducive to writing as I have found it to be for myself.
 
