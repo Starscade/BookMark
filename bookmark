@@ -80,7 +80,7 @@ s/ *\^ *(\d+)/<sup>$1<\/sup>/g;
 s/\^(.*?)\^/<sup>$1<\/sup>/g;
 s/(\d+)’(\d+)“/$1'$2"/g;
 
-# Hyperlinks
+# Hyperlinks & Email
 s/<http([\w#!:.,?+=&%@!\-\/]*) (.*?) _>/<a href="http$1"target="_Blank">$2<\/a>/gi;
 s/<http([\w#!:.,?+=&%@!\-\/]*) (.*?)>/<a href="http$1">$2<\/a>/gi;
 s/<(\w+@\w+\.\w+?)>/<a href="mailto:$1">$1<\/a>/gi;
