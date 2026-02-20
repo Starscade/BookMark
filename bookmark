@@ -1,4 +1,4 @@
-#!/usr/bin/perl -p
+#!/usr/bin/env perl -p
 
 # Disarm embedded scripts
 s/<script(.*?)>(.*?)<\/script>/<code>$2<\/code>/g;
