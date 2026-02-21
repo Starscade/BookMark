@@ -8,7 +8,7 @@
 
 ###### INSTALL
 ```
-./scripts/install.sh
+./install.sh
 ```
 
 ###### RUN
