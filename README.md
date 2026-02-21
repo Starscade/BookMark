@@ -1,6 +1,6 @@
 # Overview
 
-**BookMark** is a shorthand syntax for writing HTML. I call it a [Markdown](https://daringfireball.net/projects/markdown/syntax#philosophy) flavor, but it borrows from [Textile](https://textile-lang.com/) as well. Anyone familiar with Markdown should find BookMark easy to learn, and most Markdown editors should render BookMark files more or less accurately. However, the two are *not* interchangeable.
+**BookMark** is a shorthand syntax for writing HTML in prose. It borrows from [Markdown](https://daringfireball.net/projects/markdown/syntax#philosophy) and [Textile](https://textile-lang.com/), but is *not* interchangeable with either. Most Markdown editors will still render BookMark more or less correctly, however.
 
 
 ---
