@@ -26,7 +26,7 @@ bookmark < input.md > output.html
 | `**Bold**` | `<b>Bold</b>` |
 | `__Underline__` | `<u>Underline</u>` |
 | `~Strikethrough~` | `<s>Strikethrough</s>` |
-| `|Highlight|` | `<mark>Highlight</mark>` |
+| `\|Highlight\|` | `<mark>Highlight</mark>` |
 | `{Code}` | `<code>Code</code>` |
 | `# Title` | `<h1>Title</h1>` |
 | `## Subtitle` | `<h2>Subtitle</h2>` |
@@ -39,7 +39,7 @@ bookmark < input.md > output.html
 | `+++` | `<h3>✶ ✶ ✶</h3>` |
 | `--` | `&mdash;` |
 | ` - ` | `&ndash;` |
-| ````Lorem ipsum, et cetera.'``` | `&lsquo;Lorem ipsum, et cetera.&apos;` |
+| `\`Lorem ipsum, et cetera.'` | `&lsquo;Lorem ipsum, et cetera.&apos;` |
 | `"Lorem ipsum, et cetera."` | `<q>Lorem ipsum, et cetera.</q>` |
 | `> Lorem ipsum, et cetera.` | `<blockquote>Lorem ipsum, et cetera.</blockquote>` |
 | `<https://example.com Link Text>` | `<a href="https://example.com">Link Text</a>` |
