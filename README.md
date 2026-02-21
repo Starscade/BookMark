@@ -39,7 +39,7 @@ bookmark < input.md > output.html
 | `+++` | `<h3>✶ ✶ ✶</h3>` |
 | `--` | `&mdash;` |
 | ` - ` | `&ndash;` |
-| ```Lorem ipsum, et cetera.'`` | `&lsquo;Lorem ipsum, et cetera.&apos;` |
+| `Lorem ipsum, et cetera.' | `&lsquo;Lorem ipsum, et cetera.&apos;` |
 | `"Lorem ipsum, et cetera."` | `<q>Lorem ipsum, et cetera.</q>` |
 | `> Lorem ipsum, et cetera.` | `<blockquote>Lorem ipsum, et cetera.</blockquote>` |
 | `<https://example.com Link Text>` | `<a href="https://example.com">Link Text</a>` |
