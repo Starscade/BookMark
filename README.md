@@ -8,12 +8,12 @@
 
 ###### INSTALL
 ```
-./install.sh
+./scripts/install.sh
 ```
 
 ###### RUN
 ```
-bookmark < input.md > output.html
+bookmark input.md > output.html
 ```
 
 
