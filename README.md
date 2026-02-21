@@ -33,7 +33,7 @@ bookmark < input.md > output.html
 | `### Sub-Subtitle` | `<h3>Sub-Subtitle</h3>` |
 | `#### Sub-Sub-Subtitle` | `<h4>Sub-Sub-Subtitle</h4>` |
 | `##### Header` | `<h5>Header</h5>` |
-| `##### Sub-Header` | `<h6>Sub-Header</h6>` |
+| `###### Sub-Header` | `<h6>Sub-Header</h6>` |
 | `...` | `&hellip;` |
 | `===` | `<hr>` |
 | `+++` | `<h3>✶ ✶ ✶</h3>` |
