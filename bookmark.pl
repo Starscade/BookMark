@@ -2,7 +2,10 @@
 # Beatrice v0.2.0
 
 # Disarm embedded scripts
-s/<script(.*?)>(.*?)<\/script>/<code>$2<\/code>/g;
+s/<script(.*?)>(.*?)<\/script>//g;
+
+# Inject environment varables
+s/\$\{([A-Za-z0-9_]*?)\}/$ENV{$1}/g;
 
 # Trim excess whitespace
 s/\t//g;
@@ -42,7 +45,7 @@ s/<p>\*\*\*<\/p>/<h3>✶ ✶ ✶<\/h3>/g;
 s/<p>===<\/p>/<hr>/g;
 s/<p>- /<p>• /g;
 
-# Text styling
+# Style text
 s/\*\*(.*?)\*\*/<b>$1<\/b>/g;
 s/\*(.*?)\*/<i>$1<\/i>/g;
 s/__(.*?)__/<u>$1<\/u>/g;
@@ -51,7 +54,7 @@ s/`(.*?)`/<code>$1<\/code>/g;
 s/\|(.*?)\|/<mark>$1<\/mark>/g;
 s/\{(.*?)\}/<span>$1<\/span>/g;
 
-# Punctuation
+# Punctuate
 s/\.\.\.|…/ . . . /g;
 s/ - |(\d)-(\d)/$1–$2/g;
 s/--/—/g;
