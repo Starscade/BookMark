@@ -1,5 +1,5 @@
 #!/usr/bin/perl -p
-# v0.2.0
+# Beatrice v0.2.0
 
 # Disarm embedded scripts
 s/<script(.*?)>(.*?)<\/script>/<code>$2<\/code>/g;
@@ -10,7 +10,7 @@ s/\\ /&nbsp;/g;
 s/ +/ /g;
 s/^ *(.*?) *$/$1/g;
 
-# Escaped characters
+# Escape ambiguous characters
 s/\\\\/&bsol;/g;
 s/\\\*/&ast;/g;
 s/\\'/&apos;/g;
@@ -28,7 +28,7 @@ s/\\\}/&rbrace;/g;
 s/\\>/&gt;/g;
 s/\\</&lt;/g;
 
-# Paragraphs
+# Convert lines to paragraphs
 s/^(.*)$/<p>$1<\/p>/g;
 s/<p><\/p>/<br>/g;
 s/<p>###### *(.*)<\/p>/<h6>$1<\/h6>/g;
@@ -38,8 +38,7 @@ s/<p>### *(.*)<\/p>/<h3>$1<\/h3>/g;
 s/<p>## *(.*)<\/p>/<h2>$1<\/h2>/g;
 s/<p># *(.*)<\/p>/<h1>$1<\/h1>/g;
 s/<p>> *(.*)<\/p>/<blockquote>$1<\/blockquote>/g;
-s/<p>\+\+\+<\/p>/<h3>✶ ✶ ✶<\/h3>/g;
-s/<p>\\<\/p>/<p>&nbsp;<\/p>/g;
+s/<p>\*\*\*<\/p>/<h3>✶ ✶ ✶<\/h3>/g;
 s/<p>===<\/p>/<hr>/g;
 s/<p>- /<p>• /g;
 
@@ -50,6 +49,7 @@ s/__(.*?)__/<u>$1<\/u>/g;
 s/~(.*?)~/<s>$1<\/s>/g;
 s/`(.*?)`/<code>$1<\/code>/g;
 s/\|(.*?)\|/<mark>$1<\/mark>/g;
+s/\{(.*?)\}/<span>$1<\/span>/g;
 
 # Punctuation
 s/\.\.\.|…/ . . . /g;
@@ -80,7 +80,7 @@ s/\^(.*?)\^/<sup>$1<\/sup>/g;
 s/(\d+)’(\d+)“/$1'$2"/g;
 
 # Hyperlinks & Email
-s/<http([\w#!:.,?+=&%@!\-\/]*) (.*?) _>/<a href="http$1"target="_Blank">$2<\/a>/gi;
+s/<http([\w#!:.,?+=&%@!\-\/]*) (.*?) _>/<a href="http$1"target="_blank">$2<\/a>/gi;
 s/<http([\w#!:.,?+=&%@!\-\/]*) (.*?)>/<a href="http$1">$2<\/a>/gi;
 s/<(\w+@\w+\.\w+?)>/<a href="mailto:$1">$1<\/a>/gi;
 
